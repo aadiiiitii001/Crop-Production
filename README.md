@@ -48,15 +48,22 @@ Data is sourced from publicly available agricultural datasets.
 ---
 ## Project Structure
 crop-production/
+│
 ├── data/
-│ └── crop_production.csv
-├── analysis/
-│ ├── clean_data.py
-│ ├── yield_analysis.py
-│ └── production_trends.py
-├── app.py
+│   ├── raw/
+│   │   └── crop_production.csv
+│   └── processed/
+│       └── crop_production_clean.csv
+│
+├── src/
+│   ├── data_cleaning.py     # Cleans and preprocesses raw data
+│   ├── analysis.py          # Performs basic statistical analysis
+│   └── trends.py            # Identifies production trends over time
+│
+├── app.py                   # Project entry point
 ├── requirements.txt
 └── README.md
+
 ---
 ## Installation
 1. Clone the repository:
